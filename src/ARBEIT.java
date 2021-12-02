@@ -25,6 +25,10 @@ public class ARBEIT {
         Ausfuehren(Commandos.Quadrat, x, y, 'S');
         while (karol.BlickrichtungGeben()!='S') karol.LinksDrehen();
     }
+    public void DreierTauschAusfuehren(int x, int y) {
+        Ausfuehren(Commandos.Dreiertausch, x, y, 'S');
+        while (karol.BlickrichtungGeben()!='S') karol.LinksDrehen();
+    }
     public void Ausfuehren(Commandos commando, int x, int y, char Richtung) {
         ZuPositionBewegen(x, y, Richtung);
         while (karol.BlickrichtungGeben()!=Richtung) karol.LinksDrehen();
@@ -48,6 +52,17 @@ public class ARBEIT {
                 XmalAusfuehren(karol::Schritt, 2);
                 XmalAusfuehren(karol::LinksDrehen, 2);
                 XmalAusfuehren(karol::Schritt, 5);
+                break;
+            case Dreiertausch:
+                if (karol.IstMarke()) {
+                    karol.MarkeLoeschen();
+                }else if (karol.IstZiegel()) {
+                    karol.Aufheben();
+                    karol.MarkeSetzen();
+                }else {
+                    karol.Hinlegen();
+                }
+
                 break;
             default: break;
         }
@@ -87,6 +102,6 @@ public class ARBEIT {
     public enum Commandos {
         Quadrat,
         Viererreihe,
-        Aufgabe2; //Keine Ahnung was diese Aufgabe ist
+        Dreiertausch; //Keine Ahnung was diese Aufgabe ist
     }
 }
