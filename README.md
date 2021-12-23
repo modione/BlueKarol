@@ -2,4 +2,4 @@
 ## TODO
 ### Multiplayer
 - Sockets
-- dedicated Server
+- dedicated Servers
