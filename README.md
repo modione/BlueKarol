@@ -1,12 +1,5 @@
-
-##### TODO
-#### TODO
-### TODO
+# BlueKarol
 ## TODO
-# TODO
-## TODO
-### TODO
-#### TODO
-##### TODO
-###### TODO
--Multiplayer per sockets
+### Multiplayer
+- Sockets
+- dedicated Servers
