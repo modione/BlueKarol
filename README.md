@@ -1,3 +1,5 @@
 # BlueKarol
 ## TODO
--Multiplayer per sockets
+### Multiplayer
+- Sockets
+- dedicated Server
